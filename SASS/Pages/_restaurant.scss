@@ -1,0 +1,101 @@
+.restaurant {
+    background: $reservation-color;
+    padding-bottom: 55px;
+
+    & h1 {
+        
+        margin: 0px 0 26px 5.3%;
+        padding-top:  54px;
+    }
+
+    & .restaurants {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__card {
+        width: 335px;
+        height: 251px;
+        border-radius: 15px; 
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        margin-bottom: 18px ;
+        position: relative;
+
+        & a {
+            text-decoration: none;
+        }
+
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 174px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        &__new {
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            width: 80px;
+            height: 29px;
+            background-color: $tertiary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            color: #008766;
+            font-size: 14px;
+        }
+
+        &__container {
+            height: 77px;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+
+            &--text {
+                & h2 {
+                    font-weight: 700;
+                    font-size: 18px;
+                    margin: 10px 0 6px 13px;
+                    width: 270px;
+                }
+
+                & p {
+                    font-weight: 300;
+                    font-size: 17px;
+                    margin: 0 0 13px 13px;
+                }
+            }
+
+            &--like {
+                display: flex;
+                align-items: center;
+
+                & .empty {
+                    font-size: 23px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+    
+                    & .full {
+                        position: absolute;
+                        color: transparent;
+                        background-image:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%) ;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        opacity: 0;
+                        transition: opacity 500ms;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

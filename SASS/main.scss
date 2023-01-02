@@ -1,0 +1,22 @@
+// Utils :
+    // Variables
+    // Fonctions
+    // Mixins
+    // Placeholders
+// Feuilles de style de tiers (vendors) (si vous en avez)
+// Base
+// Composants
+// Layout
+// Pages
+// Thèmes 
+
+@import "./Utils/variables";
+@import "./Base/fonts";
+@import "./Base/body";
+@import "./Layouts/header";
+@import "./Layouts/footer";
+@import "./Pages/location";
+@import "./Pages/reservation";
+@import "./Pages/functioning";
+@import "./Pages/restaurant";
+@import "./Pages/la_palette_du_gout"
