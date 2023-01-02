@@ -51,6 +51,55 @@ footer ul li i {
   margin-right: 10px;
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.loader__dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 15px;
+  animation: loader 10 0.3s alternate;
+}
+
+.d1 {
+  background: #9356DC;
+}
+
+.d2 {
+  background: #FF79DA;
+  animation-delay: 0.05s;
+}
+
+.d3 {
+  background: #99E2D0;
+  animation-delay: 0.1s;
+}
+
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+.content {
+  animation: content 0ms 3s both;
+}
+
+@keyframes content {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .location {
   display: flex;
   justify-content: center;
