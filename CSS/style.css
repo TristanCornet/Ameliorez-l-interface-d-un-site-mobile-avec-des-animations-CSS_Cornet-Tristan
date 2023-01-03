@@ -310,17 +310,35 @@ main {
 .menu__name {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .menu__name h1 {
   font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
   margin-left: 17px;
+  margin-right: 35px;
 }
-.menu__name i {
-  margin-right: 41px;
+.menu__name .empty {
+  font-size: 23px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.menu__name .empty .full {
+  position: absolute;
+  color: transparent;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.menu__name .empty .full:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 .menu__dishes {
   margin-left: 13px;
+  animation: dishes 2s ease-out 0s both;
 }
 .menu__dishes h2 {
   font-family: "Roboto", sans-serif;
@@ -361,6 +379,26 @@ main {
 .menu__dishes__button--price {
   margin-right: 17px;
   margin-bottom: 12px;
+}
+
+@keyframes dishes {
+  0% {
+    transform: translateX(-2000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.entrees {
+  animation-delay: 0s;
+}
+
+.plats {
+  animation-delay: 1s;
+}
+
+.desserts {
+  animation-delay: 2s;
 }
 
 .order {
