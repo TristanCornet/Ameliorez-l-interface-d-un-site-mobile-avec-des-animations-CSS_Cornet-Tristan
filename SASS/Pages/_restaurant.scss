@@ -1,17 +1,26 @@
 .restaurant {
     background: $reservation-color;
     padding-bottom: 55px;
+    width: 100%;
+    overflow: hidden;
 
     & h1 {
         
         margin: 0px 0 26px 5.3%;
         padding-top:  54px;
+        @include desktop-only {
+            margin: 0 0 26px 10%;
+        }
     }
 
     & .restaurants {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include desktop-only {
+            flex-direction: row;
+            margin-left: 10%;
+        }
     }
 
     &__card {
@@ -22,6 +31,9 @@
         background-color: white;
         margin-bottom: 18px ;
         position: relative;
+        @include desktop-only {
+            margin-right: 3%;
+        }
 
         & a {
             text-decoration: none;
@@ -55,6 +67,10 @@
             color: black;
             font-family: 'Roboto', sans-serif;
             display: flex;
+            @include desktop-only {
+                margin-right: 25px;
+            }
+            
 
             &--text {
                 & h2 {

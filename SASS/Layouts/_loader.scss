@@ -1,11 +1,12 @@
 .loader {
-   width: 100%;
+   max-width: 1440px;
    height: 100%;
    position: absolute;
     display: flex;
    justify-content: center;
    align-items: center;
    background: white;
+   left: 44%;
 
    &__dot {
     width: 50px;

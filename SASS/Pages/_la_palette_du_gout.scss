@@ -1,15 +1,22 @@
 main {
-    background-color: $menu-color;
+    background-color: #fff;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .picture {
     position: relative;
+    width: 100%;
 
     & img {
         object-fit: cover;
         width: 100%;
         height:275px;
+        @include desktop-only {
+            height: 350px
+        }
     }
 }
 
@@ -19,6 +26,13 @@ main {
     border-radius: 30px 30px 0 0;
     position: relative;
     margin-top: -50px;
+    width: 100%;
+    @include desktop-only {
+        width :80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__name {
         display: flex;
@@ -57,14 +71,28 @@ main {
     &__dishes {
         margin-left: 13px ;
         animation: dishes 2s ease-out 0s both;
+        @include desktop-only {
+            width: 80%;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        & h2 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            font-size: 16px;
-            width: 40px;
-            border-bottom: 3px solid #99E2D0;
-            padding-bottom: 5px;
+        &__title {
+            width: 100%;
+            @include desktop-only {
+                margin-left: 5%;
+            }
+
+            & h2 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                width: 40px;
+                border-bottom: 3px solid #99E2D0;
+                padding-bottom: 5px;
+            }
         }
 
         &__button {
@@ -73,21 +101,27 @@ main {
             background-color: white;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
             border-radius: 15px;
             font-family: 'Roboto', sans-serif;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 12px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+
+            &:hover .menu__dishes__button__animation {
+                transform: translateX(-59px);
+            }
 
             &--text {
                 margin-left: 10px;
-                margin-bottom: 12px;
 
                 & h3 {
                     font-weight: 500;
                     margin: 0 0 5px 0;
                 }
-    
+        
                 & p {
                     font-weight: 300;
                     margin: 0;
@@ -98,9 +132,34 @@ main {
                 }
             }
             
-            &--price {
-                margin-right: 17px;
-                margin-bottom: 12px;
+            &__animation {
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: 59px;
+                height:69px ;
+                transition: transform 1s;
+                transform: translateX(0);
+
+                &--price {
+                    margin-top: 30px;
+                    margin-right: 17px;
+                }
+
+                &--validation {
+                    width: 59px;
+                    height: 69px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $tertiary-color;
+                    border-radius: 0 15px 15px 0;
+
+                    & .check {
+                        color: #fff;
+                        font-size:x-large;
+                    }
+                }
             }
         }
     }

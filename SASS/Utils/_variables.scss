@@ -14,3 +14,7 @@ $icon-color:#7E7E7E;
 
 $loader-delay : 0.3s;
 $content-delay : $loader-delay*10;
+
+$breakpoints : (
+    desktop : 768px
+) ;

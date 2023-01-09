@@ -32,10 +32,23 @@ footer {
   font-weight: 500;
   font-size: 16px;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 114px;
+    align-items: center;
+  }
+}
 footer img {
   width: 100px;
   filter: invert(100%);
   margin: 22px 0 0 25px;
+}
+@media screen and (min-width: 768px) {
+  footer img {
+    margin: 0 100px 0 0;
+  }
 }
 footer ul {
   color: #fff;
@@ -44,21 +57,35 @@ footer ul {
   margin: 19px 0 0 25px;
   padding-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0 40px 0 0;
+    padding-bottom: 0;
+  }
+}
 footer ul li {
   padding-bottom: 6px;
+}
+@media screen and (min-width: 768px) {
+  footer ul li {
+    margin-right: 40px;
+  }
 }
 footer ul li i {
   margin-right: 10px;
 }
 
 .loader {
-  width: 100%;
+  max-width: 1440px;
   height: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   background: white;
+  left: 44%;
 }
 .loader__dot {
   width: 50px;
@@ -108,6 +135,7 @@ footer ul li i {
   box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  width: 100%;
 }
 .location i {
   padding-right: 17px;
@@ -119,10 +147,18 @@ footer ul li i {
   align-items: center;
   background-color: #f6f6f6;
   text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
 }
 .reservation h1 {
   margin-top: 39px;
   margin-bottom: 10px;
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .reservation h1 {
+    font-size: 40px;
+  }
 }
 .reservation p {
   font-family: "Roboto", sans-serif;
@@ -153,15 +189,28 @@ footer ul li i {
 .functioning {
   background: #fff;
   padding-bottom: 40px;
+  width: 100%;
 }
 .functioning h1 {
-  margin: 50px 0 26px 5.3%;
+  margin: 0 0 26px 5.3%;
   padding-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .functioning h1 {
+    margin: 0 0 26px 10%;
+  }
 }
 .functioning .list {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .functioning .list {
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 40px;
+  }
 }
 .functioning .list__button {
   display: flex;
@@ -175,6 +224,11 @@ footer ul li i {
   margin-bottom: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   transition: opacity 500ms;
+}
+@media screen and (min-width: 768px) {
+  .functioning .list__button {
+    margin-right: 40px;
+  }
 }
 .functioning .list__button:hover {
   background: #f5edff;
@@ -204,15 +258,28 @@ footer ul li i {
 .restaurant {
   background: #f6f6f6;
   padding-bottom: 55px;
+  width: 100%;
+  overflow: hidden;
 }
 .restaurant h1 {
   margin: 0px 0 26px 5.3%;
   padding-top: 54px;
 }
+@media screen and (min-width: 768px) {
+  .restaurant h1 {
+    margin: 0 0 26px 10%;
+  }
+}
 .restaurant .restaurants {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .restaurant .restaurants {
+    flex-direction: row;
+    margin-left: 10%;
+  }
 }
 .restaurant__card {
   width: 335px;
@@ -222,6 +289,11 @@ footer ul li i {
   background-color: white;
   margin-bottom: 18px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__card {
+    margin-right: 3%;
+  }
 }
 .restaurant__card a {
   text-decoration: none;
@@ -252,6 +324,11 @@ footer ul li i {
   color: black;
   font-family: "Roboto", sans-serif;
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__card__container {
+    margin-right: 25px;
+  }
 }
 .restaurant__card__container--text h2 {
   font-weight: 700;
@@ -288,17 +365,26 @@ footer ul li i {
 }
 
 main {
-  background-color: #F6F6F6;
+  background-color: #fff;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .picture {
   position: relative;
+  width: 100%;
 }
 .picture img {
   object-fit: cover;
   width: 100%;
   height: 275px;
+}
+@media screen and (min-width: 768px) {
+  .picture img {
+    height: 350px;
+  }
 }
 
 .menu {
@@ -306,6 +392,15 @@ main {
   border-radius: 30px 30px 0 0;
   position: relative;
   margin-top: -50px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .menu__name {
   display: flex;
@@ -340,7 +435,24 @@ main {
   margin-left: 13px;
   animation: dishes 2s ease-out 0s both;
 }
-.menu__dishes h2 {
+@media screen and (min-width: 768px) {
+  .menu__dishes {
+    width: 80%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.menu__dishes__title {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .menu__dishes__title {
+    margin-left: 5%;
+  }
+}
+.menu__dishes__title h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -354,15 +466,20 @@ main {
   background-color: white;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   border-radius: 15px;
   font-family: "Roboto", sans-serif;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu__dishes__button:hover .menu__dishes__button__animation {
+  transform: translateX(-59px);
 }
 .menu__dishes__button--text {
   margin-left: 10px;
-  margin-bottom: 12px;
 }
 .menu__dishes__button--text h3 {
   font-weight: 500;
@@ -376,9 +493,31 @@ main {
   white-space: nowrap;
   width: 280px;
 }
-.menu__dishes__button--price {
+.menu__dishes__button__animation {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 59px;
+  height: 69px;
+  transition: transform 1s;
+  transform: translateX(0);
+}
+.menu__dishes__button__animation--price {
+  margin-top: 30px;
   margin-right: 17px;
-  margin-bottom: 12px;
+}
+.menu__dishes__button__animation--validation {
+  width: 59px;
+  height: 69px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.menu__dishes__button__animation--validation .check {
+  color: #fff;
+  font-size: x-large;
 }
 
 @keyframes dishes {
